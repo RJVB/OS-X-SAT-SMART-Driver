@@ -1,4 +1,4 @@
-/*
+/* @file IOSATCommand.h
  * Modified by Jarkko Sonninen 2012
  */
 

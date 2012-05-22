@@ -1,4 +1,4 @@
-/*
+/* @file IOSATBusCommand.h
  * Modified by Jarkko Sonninen 2012
  */
 

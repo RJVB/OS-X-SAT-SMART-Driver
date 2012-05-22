@@ -1,0 +1,200 @@
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:78: warning: member with no name found.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:81: warning: member with no name found.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:84: warning: member with no name found.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:47: warning: documented function `IOSATCompletionFunction callback function for ATA disk devices' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:302: warning: no uniquely matching class member found for 
+  IOSATCommand::reserved
+
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:66: warning: documented function `bool IOSATServices::attach' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:142: warning: documented function `void IOSATServices::detach' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:159: warning: documented function `IOReturn IOSATServices::newUserClient' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:242: warning: documented function `bool IOSATServices::handleOpen' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:280: warning: documented function `void IOSATServices::handleClose' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:303: warning: documented function `bool IOSATServices::handleIsOpen' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATServices.cpp:322: warning: documented function `IOReturn IOSATServices::sendSMARTCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:208: warning: documented function `IOExternalMethod SATSMARTUserClient::sMethods' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:225: warning: no uniquely matching class member found for 
+  bool SATSMARTUserClient::init(OSDictionary *dictionary)
+
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:322: warning: documented function `bool SATSMARTUserClient::initWithTask' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:340: warning: documented function `IOReturn SATSMARTUserClient::clientClose' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:356: warning: no uniquely matching class member found for 
+  void SATSMARTUserClient::free(void)
+
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:387: warning: documented function `IOReturn SATSMARTUserClient::message' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:419: warning: documented function `IOReturn SATSMARTUserClient::EnableDisableOperations' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:509: warning: documented function `IOReturn SATSMARTUserClient::EnableDisableAutoSave' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:600: warning: documented function `IOReturn SATSMARTUserClient::ReturnStatus' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:700: warning: documented function `IOReturn SATSMARTUserClient::ExecuteOfflineImmediate' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:777: warning: documented function `IOReturn SATSMARTUserClient::ReadData' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:901: warning: documented function `IOReturn SATSMARTUserClient::ReadDataThresholds' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1028: warning: documented function `IOReturn SATSMARTUserClient::ReadLogAtAddress' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1156: warning: documented function `IOReturn SATSMARTUserClient::WriteLogAtAddress' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1281: warning: documented function `IOReturn SATSMARTUserClient::GetIdentifyData' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1427: warning: documented function `IOExternalMethod * SATSMARTUserClient::getTargetAndMethodForIndex' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1450: warning: documented function `IOReturn SATSMARTUserClient::GatedWaitForCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1483: warning: documented function `IOReturn SATSMARTUserClient::HandleTerminate' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1519: warning: documented function `IOReturn SATSMARTUserClient::SendSMARTCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1584: warning: documented function `void SATSMARTUserClient::CommandCallback' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1602: warning: documented function `IOSATCommand * SATSMARTUserClient::AllocateCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1627: warning: documented function `void SATSMARTUserClient::DeallocateCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1656: warning: documented function `IOReturn SATSMARTUserClient::sWaitForCommand' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/UserClient/SATSMARTUserClient.cpp:1672: warning: documented function `void SATSMARTUserClient::sCommandCallback' was not declared or defined.
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:45: warning: Found unknown command `\discussion'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:89: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:90: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:135: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:136: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:165: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:166: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:175: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:176: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:129: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:130: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:104: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:105: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:99: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:100: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:150: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:151: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:145: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:146: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:170: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:171: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:109: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:110: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:140: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:141: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:119: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:120: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:155: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:156: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:114: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:115: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:189: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:190: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:160: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:161: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:180: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:181: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:124: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:125: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:94: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:95: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:194: warning: Found unknown command `\discussion'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:135: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:136: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:189: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:190: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:116: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:117: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:180: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:181: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:94: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATBusCommand.h:95: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:52: warning: Found unknown command `\discussion'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:240: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:241: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:235: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:236: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:255: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:256: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:182: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:183: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:172: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:173: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:192: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:193: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:250: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:251: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:245: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:246: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:142: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:143: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:230: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:231: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:152: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:153: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:162: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:163: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:202: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:203: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:116: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:117: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:126: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:127: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:99: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:100: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:197: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:198: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:177: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:178: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:167: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:168: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:187: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:188: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:137: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:138: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:83: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:84: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:207: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:208: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:78: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:79: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:212: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:213: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:121: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:122: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:104: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:105: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:147: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:148: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:157: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:158: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:93: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:94: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:132: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:133: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:88: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:89: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:73: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:74: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:262: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:267: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:297: warning: Found unknown command `\discussion'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:341: warning: Found unknown command `\discussion'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:425: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:426: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:415: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:416: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:435: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:436: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:405: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:406: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:385: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:386: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:365: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:366: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:375: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:376: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:395: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:396: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:420: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:421: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:410: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:411: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:430: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:431: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:400: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:401: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:380: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:381: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:360: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:361: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:370: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:371: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:390: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:391: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:440: warning: Found unknown command `\function'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:441: warning: Found unknown command `\abstract'
+/Volumes/Debian/Users/bertin/work/src/MacOSX/OS-X-SAT-SMART-Driver/SATSMARTDriver/IOSATCommand.h:445: warning: Found unknown command `\discussion'

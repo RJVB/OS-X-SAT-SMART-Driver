@@ -18,7 +18,7 @@ source=SATSMARTDriver.pkg
 #
 size=550
 title="SATSMARTDriver"
-finalDMGName=SATSMARTDriver-0.41.dmg
+finalDMGName=SATSMARTDriver-0.50.dmg
 applicationName=applicationName
  
 #Create a R/W DMG. It must be larger than the result will be. In this example, the bash variable "size" contains the size in Kb and the contents of the folder in the "source" bash variable will be copied into the DMG:
