@@ -150,6 +150,7 @@
 		D61EE2F3156A491A00A803A2 /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
 		D646DF07156B7E9B00BCAE8A /* runDoxygen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = runDoxygen.sh; path = ../Resources/runDoxygen.sh; sourceTree = "<group>"; };
 		D646DF08156B7E9B00BCAE8A /* doxygen.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = doxygen.config; path = ../Resources/doxygen.config; sourceTree = "<group>"; };
+		D6BA23EF17823F8400BE62F5 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		D6E326A115699D1B00C0B62B /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = SOURCE_ROOT; };
 		D6E326A215699D1B00C0B62B /* mkdmg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = mkdmg; path = ../mkdmg; sourceTree = SOURCE_ROOT; };
 		D6E326A315699D1B00C0B62B /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../makefile; sourceTree = SOURCE_ROOT; };
@@ -203,10 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				247142CAFF3F8F9811CA285C /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
 				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
 				A8CDB8B614E52EB500881848 /* IOKit.framework */,
-				089C167CFE841241C02AAC07 /* Resources */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
+				D6BA23EF17823F8400BE62F5 /* IOKit.framework */,
 			);
 			name = SATSMARTDriver;
 			sourceTree = "<group>";
@@ -608,10 +610,12 @@
 				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_MODEL_TUNING = "";
+				HEADER_SEARCH_PATHS = /System/Library/Frameworks/IOKit.framework/Versions/A/Headers;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
 				MODULE_NAME = org.dungeon.driver.SATSMARTDriver;
 				MODULE_VERSION = 1.0.3;
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = SATSMARTDriver;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -802,6 +806,7 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "UserClientLib/SATSMARTLib-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (

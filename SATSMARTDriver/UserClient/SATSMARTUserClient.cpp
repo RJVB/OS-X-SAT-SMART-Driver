@@ -35,7 +35,7 @@
 #include "SATSMARTUserClient.h"
 ///Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/
 #include <storage/ata/ATASMARTLib.h>
-//#include <storage/ata/ATASMARTLib.h>
+//#include <IOKit/storage/ata/ATASMARTLib.h>
 #include "../UserClientLib/SATSMARTLibPriv.h"
 //#include "ATASMARTLibPriv.h"
 
