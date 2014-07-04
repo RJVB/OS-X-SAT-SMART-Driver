@@ -40,7 +40,7 @@
 #include "SATSMARTLibPriv.h"
 
 #include <stdio.h>
-
+#include <string.h>
 
 //ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
 //	Constants
@@ -502,7 +502,7 @@ SATSMARTClient::SMARTEnableDisableOperations ( Boolean enable )
                                         kIOATASMARTEnableDisableOperations,
                                         &selection, 1,
                                         0, 0);
-    
+
     PRINT ( ( "SATSMARTClient::SMARTEnableDisableOperations status = %d\n", status ) );
 
     return status;
@@ -553,7 +553,7 @@ SATSMARTClient::SMARTReturnStatus ( Boolean * exceededCondition )
 
     status = IOConnectCallScalarMethod ( fConnection,
         kIOATASMARTReturnStatus,
-        0, 0, 
+        0, 0,
         &condition, &outputCnt);
 
     if ( status == kIOReturnSuccess )
@@ -613,10 +613,10 @@ SATSMARTClient::SMARTReadData ( ATASMARTData * data )
 
     status = IOConnectCallStructMethod ( fConnection,
                                         kIOATASMARTReadData,
-                                        ( void * ) 0, 0, 
+                                        ( void * ) 0, 0,
                                         data, &bytesTransferred
                                         );
-    
+
     PRINT ( ( "SATSMARTClient::SMARTReadData status = %d\n", status ) );
 
         #if 0
@@ -660,7 +660,7 @@ SATSMARTClient::SMARTReadDataThresholds ( ATASMARTDataThresholds * data )
 
     status = IOConnectCallStructMethod ( fConnection,
                                         kIOATASMARTReadDataThresholds,
-                                        ( void * ) 0, 0, 
+                                        ( void * ) 0, 0,
                                         data, &bytesTransferred
                                         );
 
@@ -761,7 +761,7 @@ SATSMARTClient::SMARTReadLogAtAddress ( UInt32 address,
     params.numSectors       = bufferSize / kATADefaultSectorSize;
     params.logAddress       = address & 0xFF;
     bytesTransferred = bufferSize;
-    
+
     // Can't read or write more than 16 sectors
     if ( params.numSectors > 16 )
     {
@@ -871,10 +871,10 @@ SATSMARTClient::GetATAIdentifyData ( void * buffer, UInt32 inSize, UInt32 * outS
 
     status = IOConnectCallStructMethod ( fConnection,
                                         kIOATASMARTGetIdentifyData,
-                                        ( void * ) 0, 0, 
+                                        ( void * ) 0, 0,
                                         buffer, &bytesTransferred
                                         );
-    
+
     if ( outSize != NULL )
     {
         *outSize = (UInt32) bytesTransferred;
