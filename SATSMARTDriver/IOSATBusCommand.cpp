@@ -32,7 +32,10 @@
 
 
 #include <IOKit/IOTypes.h>
-#include <IOKit/IOSyncer.h>
+#ifndef APPLE_KEXT_DEPRECATED
+#define APPLE_KEXT_DEPRECATED  __attribute__((deprecated))
+#endif
+#include "IOSyncer.h"
 //#include "IOATATypes.h"
 #include <IOKit/ata/IOATATypes.h>
 #include "IOSATCommand.h"
@@ -86,19 +89,19 @@ IOSATBusCommand*
 IOSATBusCommand::allocateCmd(void)
 {
     IOSATBusCommand* cmd = new IOSATBusCommand;
-
+    
     if( cmd == NULL)
         return NULL;
-
-
+    
+    
     if( !cmd->init() )
     {
         cmd->free();
         return NULL;
     }
-
+    
     return cmd;
-
+    
 }
 
 
@@ -111,11 +114,11 @@ IOSATBusCommand::init()
 {
     if( !super::init() )
         return false;
-
+    
     zeroCommand();
-
+    
     return true;
-
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -128,9 +131,9 @@ IOSATBusCommand::zeroCommand(void)
     queue_init( &queueChain );
     state = 0;
     syncer = NULL;
-
+    
     super::zeroCommand();
-
+    
 }
 
 
@@ -143,9 +146,9 @@ IOSATBusCommand::zeroCommand(void)
 ataOpcode
 IOSATBusCommand::getOpcode( void )
 {
-
+    
     return _opCode;
-
+    
 }
 
 
@@ -157,9 +160,9 @@ IOSATBusCommand::getOpcode( void )
 ataFlags
 IOSATBusCommand::getFlags ( void )
 {
-
+    
     return (ataFlags) _flags;
-
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -170,7 +173,7 @@ ataRegMask
 IOSATBusCommand::getRegMask( void )
 {
     return _regMask;
-
+    
 }
 
 
@@ -183,9 +186,9 @@ IOSATBusCommand::getRegMask( void )
 ataUnitID
 IOSATBusCommand::getUnit( void )
 {
-
+    
     return _unit;
-
+    
 }
 
 
@@ -197,9 +200,9 @@ IOSATBusCommand::getUnit( void )
 UInt32
 IOSATBusCommand::getTimeoutMS (void )
 {
-
+    
     return _timeoutMS;
-
+    
 }
 
 
@@ -211,9 +214,9 @@ IOSATBusCommand::getTimeoutMS (void )
 IOSATCompletionFunction*
 IOSATBusCommand::getCallbackPtr (void )
 {
-
+    
     return _callback;
-
+    
 }
 
 
@@ -226,19 +229,19 @@ void
 IOSATBusCommand::executeCallback(void)
 {
     _inUse = false;
-
+    
     if(_callback != NULL)
     {
         (*_callback)(this);
-
+        
     } else if( syncer != NULL ) {
-
+        
         syncer->signal();
         syncer = NULL;
-
+        
     }
-
-
+    
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -248,9 +251,9 @@ IOSATBusCommand::executeCallback(void)
 IOByteCount
 IOSATBusCommand::getTransferChunkSize(void)
 {
-
+    
     return _logicalChunkSize;
-
+    
 }
 
 ataTaskFile*
@@ -275,7 +278,7 @@ IOSATBusCommand::getPacketData(void)
 IOByteCount
 IOSATBusCommand::getByteCount (void)
 {
-
+    
     return _byteCount;
 }
 
@@ -283,9 +286,9 @@ IOSATBusCommand::getByteCount (void)
 IOByteCount
 IOSATBusCommand::getPosition (void)
 {
-
+    
     return _position;
-
+    
 }
 
 
@@ -306,7 +309,7 @@ IOSATBusCommand::setActualTransfer ( IOByteCount bytesTransferred )
 void
 IOSATBusCommand::setResult( IOReturn inResult)
 {
-
+    
     _result = inResult;
 }
 
@@ -314,9 +317,9 @@ IOSATBusCommand::setResult( IOReturn inResult)
 void
 IOSATBusCommand::setCommandInUse( bool inUse /* = true */)
 {
-
+    
     _inUse = inUse;
-
+    
 }
 
 #pragma mark -- IOSATBusCommand64 --
@@ -335,20 +338,20 @@ IOSATBusCommand64*
 IOSATBusCommand64::allocateCmd32(void)
 {
     IOSATBusCommand64* cmd = new IOSATBusCommand64;
-
+    
     if( cmd == NULL)
         return NULL;
-
-
+    
+    
     if( !cmd->init() )
     {
         cmd->free();
         return NULL;
     }
-
-
+    
+    
     return cmd;
-
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -360,25 +363,25 @@ IOSATBusCommand64::init()
 {
     if( !super::init() )
         return false;
-
+    
     zeroCommand();
-
+    
     _dmaCmd = IODMACommand::withSpecification(IODMACommand::OutputHost32,
-        32,
-        0x10000,
-        IODMACommand::kMapped,
-        512 * 2048,
-        2);
-
-
+                                              32,
+                                              0x10000,
+                                              IODMACommand::kMapped,
+                                              512 * 2048,
+                                              2);
+    
+    
     if( !_dmaCmd )
     {
         return false;
     }
-
-
+    
+    
     return true;
-
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -395,9 +398,9 @@ IOSATBusCommand64::zeroCommand(void)
             _dmaCmd->clearMemoryDescriptor();
         }
     }
-
+    
     super::zeroCommand();
-
+    
 }
 
 /*-----------------------------------------------------------------------------
@@ -408,70 +411,72 @@ IOSATBusCommand64::zeroCommand(void)
 void
 IOSATBusCommand64::free()
 {
-
+    
     if( _dmaCmd != NULL )
     {
         _dmaCmd->clearMemoryDescriptor();
         _dmaCmd->release();
         _dmaCmd = NULL;
     }
-
+    
     super::free();
-
+    
 }
 
 void
 IOSATBusCommand64::setBuffer ( IOMemoryDescriptor* inDesc)
 {
-
+    
     super::setBuffer( inDesc );
-
+    
 }
 
 void
 IOSATBusCommand64::executeCallback(void)
 {
     if( _dmaCmd != NULL
-        && _desc != NULL
-        && ( _flags & mATAFlagUseDMA ) )
+       && _desc != NULL
+       && ( _flags & mATAFlagUseDMA ) )
     {
         _dmaCmd->complete();
     }
-
-    _dmaCmd->clearMemoryDescriptor();
-
+    
+    if( _dmaCmd != NULL) {
+        _dmaCmd->clearMemoryDescriptor();
+    }
+    
     super::executeCallback();
-
+    
 }
 
 
 IODMACommand*
 IOSATBusCommand64::GetDMACommand( void )
 {
-
+    
     return _dmaCmd;
-
+    
 }
 
 void
 IOSATBusCommand64::setCommandInUse( bool inUse /* = true */)
 {
-
+    
     if( inUse )
     {
-
+        
         if( _dmaCmd != NULL
-            && _desc != NULL
-            && ( _flags & mATAFlagUseDMA ) )
+           && _desc != NULL
+           && ( _flags & mATAFlagUseDMA ) )
         {
             _dmaCmd->setMemoryDescriptor( _desc, true );
-
-
+            
+            
         }
-
-
+        
+        
     }
-
+    
     super::setCommandInUse( inUse);
-
+    
 }

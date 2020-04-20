@@ -27,17 +27,15 @@
  * @APPLE_LICENSE_HEADER_END@
  */
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	Includes
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 // Private includes
 #include "SATSMARTUserClient.h"
 ///Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/
 #include <storage/ata/ATASMARTLib.h>
-//#include <IOKit/storage/ata/ATASMARTLib.h>
 #include "../UserClientLib/SATSMARTLibPriv.h"
-//#include "ATASMARTLibPriv.h"
 
 // IOKit includes
 #include <IOKit/IOMemoryDescriptor.h>
@@ -72,9 +70,9 @@ OSDefineMetaClassAndStructors ( SATSMARTUserClient, IOUserClient );
 #endif
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	Enums
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 // S.M.A.R.T command code
 enum
@@ -125,9 +123,9 @@ enum
 };
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	Constants
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOExternalMethod
 SATSMARTUserClient::sMethods[kIOATASMARTMethodCount] =
@@ -204,7 +202,7 @@ SATSMARTUserClient::sMethods[kIOATASMARTMethodCount] =
         0,
         kATADefaultSectorSize
     }
-
+    
 };
 
 
@@ -215,417 +213,417 @@ SATSMARTUserClient::sMethods[kIOATASMARTMethodCount] =
 #endif
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ init - Initializes member variables							[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ init - Initializes member variables							[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 bool
 SATSMARTUserClient::init ( OSDictionary * dictionary )
 {
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     if ( !super::init ( dictionary ) )
         return false;
-
+    
     fTask                                   = NULL;
     fProvider                               = NULL;
     fOutstandingCommands    = 0;
-
+    
     return true;
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ start - Start providing services								[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ start - Start providing services								[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 bool
 SATSMARTUserClient::start ( IOService * provider )
 {
     IOWorkLoop *    workLoop = NULL;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     if ( fProvider != NULL )
     {
-
+        
         ERROR_LOG ( "fProvider != NULL, returning false\n" );
         return false;
-
+        
     }
-
+    
     fProvider = OSDynamicCast ( IOSATServices, provider );
     if ( fProvider == NULL )
     {
-
+        
         ERROR_LOG ( "Provider not IOSATServices\n" );
         return false;
-
+        
     }
-
+    
     if ( !super::start ( provider ) )
     {
-
+        
         ERROR_LOG ( "super rejected provider in start\n" );
         return false;
-
+        
     }
-
+    
     fCommandGate = IOCommandGate::commandGate ( this );
     if ( fCommandGate == NULL )
     {
-
+        
         ERROR_LOG ( "Command gate creation failed\n" );
         return false;
-
+        
     }
-
+    
     workLoop = getWorkLoop ( );
     if ( workLoop == NULL )
     {
-
+        
         ERROR_LOG ( "workLoop == NULL\n" );
         fCommandGate->release ( );
         fCommandGate = NULL;
         return false;
-
+        
     }
-
+    
     workLoop->addEventSource ( fCommandGate );
-
+    
     if ( !fProvider->open ( this, kIOATASMARTUserClientAccessMask, 0 ) )
     {
-
+        
         ERROR_LOG ( "Open failed\n" );
         fCommandGate->release ( );
         fCommandGate = NULL;
         return false;
-
+        
     }
-
+    
     fWorkLoop = workLoop;
-
+    
     // Yes, we found an object to use as our interface
     return true;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ initWithTask - Save task_t and validate the connection type	[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ initWithTask - Save task_t and validate the connection type	[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 bool
 SATSMARTUserClient::initWithTask ( task_t owningTask,
-                                   void *       securityToken,
-                                   UInt32 type )
+                                  void *       securityToken,
+                                  UInt32 type )
 {
     DEBUG_LOG("%s[%p]::%s task = %p\n", getClassName(), this, __FUNCTION__, owningTask);
-
+    
     if ( type != kIOATASMARTLibConnection )
         return false;
-
+    
     fTask = owningTask;
     return true;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ clientClose - Close down services.							[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ clientClose - Close down services.							[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::clientClose ( void )
 {
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     if ( fProvider != NULL )
         HandleTerminate ( fProvider );
-
+    
     return super::clientClose ( );
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ free - Releases any items we need to release.					[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ free - Releases any items we need to release.					[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void
 SATSMARTUserClient::free ( void )
 {
-
+    
     // Remove the command gate from the workloop
     if ( fWorkLoop != NULL )
     {
-
+        
         fWorkLoop->removeEventSource ( fCommandGate );
         fWorkLoop = NULL;
-
+        
     }
-
+    
     // Release the command gate
     if ( fCommandGate != NULL )
     {
-
+        
         fCommandGate->release ( );
         fCommandGate = NULL;
-
+        
     }
-
+    
     super::free ( );
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ message - Handles termination messages.						[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ message - Handles termination messages.						[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::message ( UInt32 type, IOService * provider, void * arg )
 {
     IOReturn status = kIOReturnSuccess;
-
+    
     DEBUG_LOG("%s[%p]::%s type = %u, provider = %p\n", getClassName(), this, __FUNCTION__, (unsigned int)type, provider );
-
+    
     switch ( type )
     {
-
-    case kIOMessageServiceIsRequestingClose:
-        break;
-
-    case kIOMessageServiceIsTerminated:
-        status = HandleTerminate ( provider );
-        break;
-
-    default:
-        status = super::message ( type, provider, arg );
-        break;
+            
+        case kIOMessageServiceIsRequestingClose:
+            break;
+            
+        case kIOMessageServiceIsTerminated:
+            status = HandleTerminate ( provider );
+            break;
+            
+        default:
+            status = super::message ( type, provider, arg );
+            break;
     }
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ EnableDisableOperations - Enables/Disables SMART operations.	[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ EnableDisableOperations - Enables/Disables SMART operations.	[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::EnableDisableOperations ( UInt32 enable )
 {
-
+    
     IOReturn status = kIOReturnSuccess;
     IOSATCommand *  command;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     if ( enable == 0 )
     {
-
+        
         // They want to disable SMART operations.
         command->setFeatures ( kFeaturesRegisterDisableOperations );
-
+        
     }
-
+    
     else
     {
-
+        
         // The want to enable SMART operations.
         command->setFeatures ( kFeaturesRegisterEnableOperations );
-
+        
     }
-
+    
     command->setOpcode              ( kATAFnExecIO );
     command->setTimeoutMS   ( kATAThirtySecondTimeoutInMS );
     command->setCylLo               ( kSMARTMagicCylinderLoValue );
     command->setCylHi               ( kSMARTMagicCylinderHiValue );
     command->setCommand             ( kATAcmdSMART );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "Enable/Disable unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
     }
-
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ EnableDisableAutoSave - Enables/Disables SMART autosave.		[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ EnableDisableAutoSave - Enables/Disables SMART autosave.		[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::EnableDisableAutoSave ( UInt32 enable )
 {
-
+    
     IOReturn status = kIOReturnSuccess;
     IOSATCommand *  command;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     if ( enable == 0 )
     {
-
+        
         // They want to disable SMART autosave operations.
         command->setSectorCount ( kSMARTAutoSaveDisable );
-
+        
     }
-
+    
     else
     {
-
+        
         // They want to enable SMART autosave operations.
         command->setSectorCount ( kSMARTAutoSaveEnable );
-
+        
     }
-
+    
     command->setFeatures    ( kFeaturesRegisterEnableDisableAutoSave );
     command->setOpcode              ( kATAFnExecIO );
     command->setTimeoutMS   ( kATAThirtySecondTimeoutInMS );
     command->setCylLo               ( kSMARTMagicCylinderLoValue );
     command->setCylHi               ( kSMARTMagicCylinderHiValue );
     command->setCommand             ( kATAcmdSMART );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "Enable/Disable autosave unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
     }
-
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ ReturnStatus - Returns SMART status.							[PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ ReturnStatus - Returns SMART status.							[PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::ReturnStatus ( UInt32 * exceededCondition )
 {
-
+    
     IOReturn status  = kIOReturnSuccess;
     IOSATCommand *  command = NULL;
     UInt8 lbaMid  = kSMARTMagicCylinderLoValue;
     UInt8 lbaHigh = kSMARTMagicCylinderHiValue;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     command->setFeatures    ( kFeaturesRegisterReturnStatus );
     command->setOpcode              ( kATAFnExecIO );
     command->setTimeoutMS   ( kATAThirtySecondTimeoutInMS );
@@ -634,96 +632,96 @@ SATSMARTUserClient::ReturnStatus ( UInt32 * exceededCondition )
     command->setCommand             ( kATAcmdSMART );
     command->setRegMask             ( ( ataRegMask ) ( mATACylinderHiValid | mATACylinderLoValid ) );
     command->setFlags               ( mATAFlagTFAccessResult );
-
+    
     status = SendSMARTCommand ( command );
-
+    
     lbaMid  = command->getCylLo ( );
     lbaHigh = command->getCylHi ( );
-
+    
     if ( status == kIOReturnSuccess )
     {
-
+        
         // Check if threshold exceeded
         if ( ( lbaMid == kSMARTReturnStatusValidLoValue ) &&
-             ( lbaHigh == kSMARTReturnStatusValidHiValue ) )
+            ( lbaHigh == kSMARTReturnStatusValidHiValue ) )
         {
             *exceededCondition = 1;
         }
-
+        
         else
         {
             *exceededCondition = 0;
         }
-
+        
     }
-
+    
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "Return Status unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
     }
-
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ ExecuteOfflineImmediate - Executes self test offline immediately. [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ ExecuteOfflineImmediate - Executes self test offline immediately. [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::ExecuteOfflineImmediate ( UInt32 extendedTest )
 {
-
+    
     IOReturn status  = kIOReturnSuccess;
     IOSATCommand *  command = NULL;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     command->setFeatures            ( kFeaturesRegisterExecuteOfflineImmed );
     command->setOpcode                      ( kATAFnExecIO );
     command->setTimeoutMS           ( kATAThirtySecondTimeoutInMS );
@@ -731,98 +729,98 @@ SATSMARTUserClient::ExecuteOfflineImmediate ( UInt32 extendedTest )
     command->setCylLo                       ( kSMARTMagicCylinderLoValue );
     command->setCylHi                       ( kSMARTMagicCylinderHiValue );
     command->setCommand                     ( kATAcmdSMART );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "Execute Offline Immediate unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
     }
-
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ ReadData - Reads SMART data.                                                                     [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ ReadData - Reads SMART data.                                                                     [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::ReadData (UInt32 * dataOut,
                               IOByteCount * outputSize)
 {
-
+    
     IOReturn status  = kIOReturnSuccess;
     IOSATCommand *                  command = NULL;
     IOMemoryDescriptor *    buffer  = NULL;
     DEBUG_LOG("%s[%p]::%s data = %p\n", getClassName(), this, __FUNCTION__, (void*)dataOut);
-
+    
     if (!dataOut ||  !outputSize || *outputSize != sizeof ( ATASMARTData ) ) {
         return kIOReturnBadArgument;
     }
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
         status = kIOReturnNoResources;
         goto ReleaseProvider;
     }
-
+    
     buffer = IOMemoryDescriptor::withAddress(dataOut, sizeof ( ATASMARTData ), kIODirectionIn);
     
     if ( buffer == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseCommand;
-
+        
     }
-
+    
     status = buffer->prepare ( );
-    DEBUG_LOG("%s[%p]::%s prepare %p\n", getClassName(), this,  __FUNCTION__, (void*)status);
+    DEBUG_LOG("%s[%p]::%s prepare %x\n", getClassName(), this,  __FUNCTION__, status);
     if ( status != kIOReturnSuccess )
     {
-
+        
         goto ReleaseBuffer;
-
+        
     }
-
+    
     command->setBuffer                      ( buffer );
     command->setByteCount           ( sizeof ( ATASMARTData ) );
     command->setFeatures            ( kFeaturesRegisterReadData );
@@ -832,122 +830,122 @@ SATSMARTUserClient::ReadData (UInt32 * dataOut,
     command->setCylHi                       ( kSMARTMagicCylinderHiValue );
     command->setCommand                     ( kATAcmdSMART );
     command->setFlags                       ( mATAFlagIORead );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "ReadData unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
         if ( command->getEndErrorReg ( ) & 0x10 )
         {
-
+            
             ERROR_LOG ( "ReadData Not readable\n" );
             status = kIOReturnNotReadable;
-
+            
         }
-
+        
     }
-
+    
     *outputSize = buffer->getLength();
-
+    
     buffer->complete ( );
-
-
+    
+    
 ReleaseBuffer:
-
-
+    
+    
     buffer->release ( );
     buffer = NULL;
-
-
+    
+    
 ReleaseCommand:
-
-
+    
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ ReadDataThresholds - Reads SMART data thresholds.                        [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ ReadDataThresholds - Reads SMART data thresholds.                        [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::ReadDataThresholds (UInt32 * dataOut,
                                         IOByteCount * outputSize)
 {
-
+    
     IOReturn status  = kIOReturnSuccess;
     IOSATCommand *                  command = NULL;
     IOMemoryDescriptor *    buffer  = NULL;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     if (!dataOut || !outputSize || *outputSize != sizeof ( ATASMARTDataThresholds ) ) {
         return kIOReturnBadArgument;
     }
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     buffer = IOMemoryDescriptor::withAddress(dataOut, sizeof ( ATASMARTDataThresholds ), kIODirectionIn);
     
     if ( buffer == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseCommand;
-
+        
     }
-
+    
     status = buffer->prepare ( );
     if ( status != kIOReturnSuccess )
     {
-
+        
         goto ReleaseBuffer;
-
+        
     }
-
+    
     command->setBuffer                      ( buffer );
     command->setByteCount           ( sizeof ( ATASMARTDataThresholds ) );
     command->setFeatures            ( kFeaturesRegisterReadDataThresholds );
@@ -957,68 +955,68 @@ SATSMARTUserClient::ReadDataThresholds (UInt32 * dataOut,
     command->setCylHi                       ( kSMARTMagicCylinderHiValue );
     command->setCommand                     ( kATAcmdSMART );
     command->setFlags                       ( mATAFlagIORead );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "ReadDataThresholds unsupported\n" );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
         if ( command->getEndErrorReg ( ) & 0x10 )
         {
-
+            
             ERROR_LOG ( "ReadDataThresholds Not readable\n" );
             status = kIOReturnNotReadable;
-
+            
         }
-
+        
     }
-
+    
     *outputSize = buffer->getLength();
-
+    
     buffer->complete ( );
-
-
+    
+    
 ReleaseBuffer:
-
-
+    
+    
     buffer->release ( );
     buffer = NULL;
-
-
+    
+    
 ReleaseCommand:
-
-
+    
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ ReadLogAtAddress - Reads the SMART log at the specified address. [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ ReadLogAtAddress - Reads the SMART log at the specified address. [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::ReadLogAtAddress ( ATASMARTReadLogStruct * structIn,
@@ -1026,53 +1024,53 @@ SATSMARTUserClient::ReadLogAtAddress ( ATASMARTReadLogStruct * structIn,
                                       IOByteCount inStructSize,
                                       IOByteCount *outStructSize)
 {
-
+    
     IOReturn status                  = kIOReturnSuccess;
     IOSATCommand *                  command                 = NULL;
     IOMemoryDescriptor *    buffer                  = NULL;
     DEBUG_LOG("%s[%p]::%s %p(%ld) %p(%ld)\n", getClassName(), this, __FUNCTION__, structIn, (long)inStructSize, structOut, (long)(outStructSize));
-
+    
     if ( inStructSize != sizeof ( ATASMARTReadLogStruct )  || !outStructSize || *outStructSize < 1) {
         return kIOReturnBadArgument;
     }
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     buffer = IOMemoryDescriptor::withAddress (structOut,  *outStructSize, kIODirectionIn);
     if ( buffer == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseCommand;
-
+        
     }
-
+    
     status = buffer->prepare ( );
-    DEBUG_LOG("%s[%p]::%s status %p\n", getClassName(), this, __FUNCTION__, (void *)status);
+    DEBUG_LOG("%s[%p]::%s status %x\n", getClassName(), this, __FUNCTION__, status);
     if ( status != kIOReturnSuccess )
     {
-
+        
         goto ReleaseBuffer;
-
+        
     }
     
     command->setBuffer                      ( buffer );
@@ -1086,125 +1084,120 @@ SATSMARTUserClient::ReadLogAtAddress ( ATASMARTReadLogStruct * structIn,
     command->setCylHi                       ( kSMARTMagicCylinderHiValue );
     command->setCommand                     ( kATAcmdSMART );
     command->setFlags                       ( mATAFlagIORead );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "ReadLogAtAddress %d unsupported\n", structIn->logAddress );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
         if ( command->getEndErrorReg ( ) & 0x10 )
         {
-
+            
             ERROR_LOG ( "ReadLogAtAddress %d unreadable\n", structIn->logAddress );
             status = kIOReturnNotReadable;
-
+            
         }
-
+        
     }
-
+    
     *outStructSize = buffer->getLength();
     
     buffer->complete ( );
     
-
-
+    
+    
 ReleaseBuffer:
-
-
+    
+    
     buffer->release ( );
     buffer = NULL;
-
-
+    
+    
 ReleaseCommand:
-
-
+    
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ WriteLogAtAddress - Writes the SMART log at the specified address. [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ WriteLogAtAddress - Writes the SMART log at the specified address. [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::WriteLogAtAddress ( ATASMARTWriteLogStruct *        writeLogData,
-                                        UInt32 inStructSize )
+                                       UInt32 inStructSize )
 {
-
+    
     IOReturn status                  = kIOReturnSuccess;
     IOSATCommand *                  command                 = NULL;
     IOMemoryDescriptor *    buffer                  = NULL;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
-    if ( inStructSize != sizeof ( ATASMARTWriteLogStruct ) ) {
+    
+    if ( inStructSize != sizeof ( ATASMARTWriteLogStruct ) || writeLogData->numSectors > 16 || writeLogData->data_length > kSATMaxDataSize) {
         return kIOReturnBadArgument;
     }
-
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
     }
-
-    buffer = IOMemoryDescriptor::withAddress(writeLogData->buffer, writeLogData->bufferSize, kIODirectionOut);
+    
+    //buffer = IOMemoryDescriptor::withAddress(writeLogData->buffer, writeLogData->bufferSize, kIODirectionOut);
+    buffer = IOMemoryDescriptor::withAddressRange(writeLogData->data_pointer, writeLogData->data_length, kIODirectionOut, fTask);
     
     if ( buffer == NULL )
     {
-
-        status = kIOReturnNoResources;
+        status = kIOReturnVMError;
         goto ReleaseCommand;
-
     }
-
+    
     status = buffer->prepare ( );
     if ( status != kIOReturnSuccess )
     {
-
         goto ReleaseBuffer;
-
     }
-
+    
     command->setBuffer                      ( buffer );
-    command->setByteCount           ( writeLogData->bufferSize );
+    command->setByteCount           ( writeLogData->data_length );
     command->setFeatures            ( kFeaturesRegisterWriteLogAtAddress );
     command->setOpcode                      ( kATAFnExecIO );
     command->setTimeoutMS           ( kATAThirtySecondTimeoutInMS );
@@ -1214,120 +1207,117 @@ SATSMARTUserClient::WriteLogAtAddress ( ATASMARTWriteLogStruct *        writeLog
     command->setCylHi                       ( kSMARTMagicCylinderHiValue );
     command->setCommand                     ( kATAcmdSMART );
     command->setFlags                       ( mATAFlagIOWrite );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnIOError )
     {
-
+        
         if ( command->getEndErrorReg ( ) & 0x04 )
         {
-
+            
             ERROR_LOG ( "WriteLogAtAddress %d unsupported\n", writeLogData->logAddress );
             status = kIOReturnUnsupported;
-
+            
         }
-
+        
         if ( command->getEndErrorReg ( ) & 0x10 )
         {
-
+            
             ERROR_LOG ( "WriteLogAtAddress %d unwriteable\n", writeLogData->logAddress );
             status = kIOReturnNotWritable;
-
+            
         }
-
+        
     }
-
+    
     buffer->complete ( );
-
-
+    
+    
 ReleaseBuffer:
-
-
+    
+    
     buffer->release ( );
     buffer = NULL;
-
-
+    
+    
 ReleaseCommand:
-
-
+    
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ GetIdentifyData - Gets identify data.							   [PUBLIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ GetIdentifyData - Gets identify data.							   [PUBLIC]
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::GetIdentifyData (UInt32 * dataOut,
 				     IOByteCount * outputSize)
 {
-
+    
     IOReturn status                  = kIOReturnSuccess;
     IOSATCommand *                          command                 = NULL;
     IOMemoryDescriptor *      buffer                  = NULL;
-    UInt8 *                                         identifyDataPtr = NULL;
     DEBUG_LOG("%s[%p]::%s %p(%ld)\n", getClassName(), this, __FUNCTION__, dataOut, (long)(outputSize));
-
+    
     if (!dataOut || !outputSize || *outputSize < kATADefaultSectorSize ) {
         return kIOReturnBadArgument;
     }
-        
+    
     fOutstandingCommands++;
-
+    
     if ( isInactive ( ) )
     {
-
+        
         status = kIOReturnNoDevice;
         goto ErrorExit;
-
+        
     }
-
+    
     fProvider->retain ( );
-
+    
     command = AllocateCommand ( );
     if ( command == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseProvider;
-
+        
     }
-
+    
     buffer = IOMemoryDescriptor::withAddress(dataOut, kATADefaultSectorSize, kIODirectionIn);
     if ( buffer == NULL )
     {
-
+        
         status = kIOReturnNoResources;
         goto ReleaseCommand;
-
+        
     }
-
-    identifyDataPtr = ( UInt8 * )dataOut;
-
+    
     status = buffer->prepare ( );
     if ( status != kIOReturnSuccess )
     {
-
+        
         goto ReleaseBuffer;
-
+        
     }
     
     command->setBuffer                              ( buffer );
@@ -1338,74 +1328,75 @@ SATSMARTUserClient::GetIdentifyData (UInt32 * dataOut,
     command->setCommand                             ( kATAcmdDriveIdentify );
     command->setFlags                               ( mATAFlagIORead );
     command->setRegMask                             ( ( ataRegMask ) ( mATAErrFeaturesValid | mATAStatusCmdValid ) );
-
+    
     status = SendSMARTCommand ( command );
     if ( status == kIOReturnSuccess )
     {
-
-                #if defined(__BIG_ENDIAN__)
+        
+#if defined(__BIG_ENDIAN__)
         UInt8 *         bufferToCopy = identifyDataPtr;
-
+        
         // The identify device info needs to be byte-swapped on big-endian (ppc)
         // systems becuase it is data that is produced by the drive, read across a
         // 16-bit little-endian PCI interface, directly into a big-endian system.
         // Regular data doesn't need to be byte-swapped because it is written and
         // read from the host and is intrinsically byte-order correct.
-
+        
         IOByteCount index;
         UInt8 temp;
         UInt8 *                 firstBytePtr;
-
+        UInt8 *                 identifyDataPtr = ( UInt8 * )dataOut;
+        
         for ( index = 0; index < buffer->getLength ( ); index += 2 )
         {
-
+            
             firstBytePtr            = identifyDataPtr;                          // save pointer
             temp                            = *identifyDataPtr++;               // Save Byte0, point to Byte1
             *firstBytePtr           = *identifyDataPtr;                         // Byte0 = Byte1
             *identifyDataPtr++      = temp;                                             // Byte1 = Byte0
-
+            
         }
-
-                #endif
-
+        
+#endif
+        
         *outputSize = buffer->getLength ( );
         DEBUG_LOG("%s[%p]::%s cpy %p %p\n", getClassName(), this,  __FUNCTION__, (void*)*outputSize, (void*)buffer->getLength());
     }
-
-
+    
+    
 ReleaseBufferPrepared:
-
+    
     buffer->complete ( );
-
-
+    
+    
 ReleaseBuffer:
-
-
+    
+    
     buffer->release ( );
     buffer = NULL;
-
-
+    
+    
 ReleaseCommand:
-
-
+    
+    
     DeallocateCommand ( command );
     command = NULL;
-
-
+    
+    
 ReleaseProvider:
-
-
+    
+    
     fProvider->release ( );
-
-
+    
+    
 ErrorExit:
-
-
+    
+    
     fOutstandingCommands--;
-
-    DEBUG_LOG("%s[%p]::%s result %p\n", getClassName(), this,  __FUNCTION__, (void*)status);
+    
+    DEBUG_LOG("%s[%p]::%s result %x\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
@@ -1416,45 +1407,45 @@ ErrorExit:
 #endif
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ getTargetAndMethodForIndex -  Returns a pointer to the target of the
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ getTargetAndMethodForIndex -  Returns a pointer to the target of the
 //									method call and the method vector itself
 //									based on the provided index.	[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOExternalMethod *
 SATSMARTUserClient::getTargetAndMethodForIndex ( IOService ** target, UInt32 index )
 {
-
+    
     DEBUG_LOG("%s[%p]::%s index %d\n", getClassName(), this, __FUNCTION__, (int)index);
     if ( index >= kIOATASMARTMethodCount )
         return NULL;
-
+    
     if ( isInactive ( ) )
         return NULL;
-
+    
     *target = this;
-
+    
     return &sMethods[index];
-
+    
 }
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ GatedWaitForCommand -	Waits for signal to wake up. It must hold the
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ GatedWaitForCommand -	Waits for signal to wake up. It must hold the
 //							workloop lock in order to call commandSleep()
 //																	[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::GatedWaitForCommand ( IOSATCommand * command )
 {
-
+    
     IOReturn status = kIOReturnSuccess;
     SATSMARTRefCon *        refCon;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     refCon = ( SATSMARTRefCon * ) command->refCon;
-
+    
     // Check to make sure the command hasn't been completed and called the
     // callback handler before the stack unwinds and we get the workloop
     // lock. This usually won't happen since the callback runs on the
@@ -1462,34 +1453,34 @@ SATSMARTUserClient::GatedWaitForCommand ( IOSATCommand * command )
     // but it is still good to do this sanity check.
     while ( refCon->isDone != true )
     {
-
+        
         fCommandGate->commandSleep ( &refCon->sleepOnIt, THREAD_UNINT );
-
+        
     }
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ HandleTerminate -	Handles terminating our object and any resources it
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ HandleTerminate -	Handles terminating our object and any resources it
 //						allocated.									[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::HandleTerminate ( IOService * provider )
 {
-
+    
     IOReturn status = kIOReturnSuccess;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     while ( fOutstandingCommands != 0 )
     {
         IOSleep ( 10 );
     }
-
+    
     // Check if we have our provider open.
     if ( provider->isOpen ( this ) )
     {
@@ -1497,136 +1488,136 @@ SATSMARTUserClient::HandleTerminate ( IOService * provider )
         DEBUG_LOG("%s[%p]::%s closing provider\n", getClassName(), this, __FUNCTION__);
         provider->close ( this, kIOATASMARTUserClientAccessMask );
     }
-
+    
     // Decouple us from the IORegistry.
     detach ( provider );
     fProvider = NULL;
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ SendSMARTCommand - Sends a command to the hardware synchronously.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ SendSMARTCommand - Sends a command to the hardware synchronously.
 //						 This is a helper method for all our non-exclusive
 //						 methods.									[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::SendSMARTCommand ( IOSATCommand * command )
 {
-
+    
     SATSMARTRefCon refCon;
     IOReturn status  = kIOReturnSuccess;
-
+    
     bzero ( &refCon, sizeof ( refCon ) );
-
+    
     refCon.isDone   = false;
     refCon.self             = this;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     command->setCallbackPtr ( &SATSMARTUserClient::sCommandCallback );
     command->refCon = ( void * ) &refCon;
-
+    
     // Retain this object. It will be released by CommandCallback method.
     retain ( );
-
+    
     status = fProvider->sendSMARTCommand ( command );
     if ( status == kIOReturnSuccess )
     {
-
+        
         fCommandGate->runAction ( ( IOCommandGate::Action ) &SATSMARTUserClient::sWaitForCommand,
-            ( void * ) command );
-
+                                 ( void * ) command );
+        
         switch ( command->getResult ( ) )
         {
-
-        case kATANoErr:
-            status = kIOReturnSuccess;
-            break;
-
-        case kATATimeoutErr:
-            status = kIOReturnTimeout;
-            break;
-
-        default:
-            status = kIOReturnIOError;
-            break;
-
+                
+            case kATANoErr:
+                status = kIOReturnSuccess;
+                break;
+                
+            case kATATimeoutErr:
+                status = kIOReturnTimeout;
+                break;
+                
+            default:
+                status = kIOReturnIOError;
+                break;
+                
         }
-
+        
     }
-
+    
     else
     {
-
+        
         // Error path, release this object since we called retain()
         release ( );
-
+        
     }
-
+    
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, status);
     return status;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ CommandCallback -     This method is called by sCommandCallback as the
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ CommandCallback -     This method is called by sCommandCallback as the
 //							completion routine for all IOSATCommands.
 //																	[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void
 SATSMARTUserClient::CommandCallback ( IOSATCommand * command )
 {
-
+    
     SATSMARTRefCon *                refCon  = NULL;
-
+    
     refCon = ( SATSMARTRefCon * ) command->refCon;
     fCommandGate->commandWakeup ( &refCon->sleepOnIt, true );
     release ( );
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ AllocateCommand -     This method allocates an IOSATCommand object.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ AllocateCommand -     This method allocates an IOSATCommand object.
 //																	[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOSATCommand *
 SATSMARTUserClient::AllocateCommand ( void )
 {
-
+    
     //IOSATCommand *	command = NULL;
     //IOATADevice *	device	= NULL;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     IOSATBusCommand64* cmd = IOSATBusCommand64::allocateCmd32();
-
+    
     return (IOSATCommand*) cmd;
-
+    
     //device = ( IOATADevice * ) ( fProvider->getProvider ( )->getProvider ( ) );
     //command = device->allocCommand ( );
-
+    
     //return command;
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ DeallocateCommand -   This method deallocates an IOSATCommand object.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ DeallocateCommand -   This method deallocates an IOSATCommand object.
 //																	[PROTECTED]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void
 SATSMARTUserClient::DeallocateCommand ( IOSATCommand * command )
 {
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-
+    
     if ( command != NULL )
     {
         //IOATADevice *   device  = NULL;
@@ -1634,7 +1625,7 @@ SATSMARTUserClient::DeallocateCommand ( IOSATCommand * command )
         //device->freeCommand ( command );
         command->release();
     }
-
+    
 }
 
 
@@ -1645,35 +1636,35 @@ SATSMARTUserClient::DeallocateCommand ( IOSATCommand * command )
 #endif
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ sWaitForCommand - Called by runAction and holds the workloop lock.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ sWaitForCommand - Called by runAction and holds the workloop lock.
 //																	[STATIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 IOReturn
 SATSMARTUserClient::sWaitForCommand ( void *                    userClient,
-                                      IOSATCommand *        command )
+                                     IOSATCommand *        command )
 {
-
+    
     return ( ( SATSMARTUserClient * ) userClient )->GatedWaitForCommand ( command );
-
+    
 }
 
 
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
-//	¥ sCommandCallback -	Static completion routine. Calls CommandCallback.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	ï¿½ sCommandCallback -	Static completion routine. Calls CommandCallback.
 //							It holds the workloop lock as well since it is on
 //							the completion chain from the controller.
 //																	[STATIC]
-//ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void
 SATSMARTUserClient::sCommandCallback ( IOSATCommand * command )
 {
-
+    
     SATSMARTRefCon *                refCon  = NULL;
     DEBUG_LOG("%s::%s command %p\n", getClassName(), __FUNCTION__, command);
-
+    
     refCon = ( SATSMARTRefCon * ) command->refCon;
     if ( refCon == NULL )
     {
@@ -1681,8 +1672,8 @@ SATSMARTUserClient::sCommandCallback ( IOSATCommand * command )
         //IOPanic ( "SATSMARTUserClient::sCommandCallback refCon == NULL." );
         return;
     }
-
+    
     refCon->isDone = true;
     refCon->self->CommandCallback ( command );
-
+    
 }
