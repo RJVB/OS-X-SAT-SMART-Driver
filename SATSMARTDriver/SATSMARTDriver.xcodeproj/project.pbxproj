@@ -156,9 +156,6 @@
 		A8D7732714E9B2DB00195DA7 /* IOSATCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOSATCommand.cpp; sourceTree = "<group>"; };
 		A8D7732C14EABA9400195DA7 /* IOSATCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSATCommand.h; sourceTree = "<group>"; };
 		A8D7732E14EABAC600195DA7 /* IOSATBusCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSATBusCommand.h; sourceTree = "<group>"; };
-		D61EE2F1156A491A00A803A2 /* 01root-contents.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "01root-contents.xml"; sourceTree = "<group>"; };
-		D61EE2F2156A491A00A803A2 /* 01root.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 01root.xml; sourceTree = "<group>"; };
-		D61EE2F3156A491A00A803A2 /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
 		D646DF07156B7E9B00BCAE8A /* runDoxygen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = runDoxygen.sh; path = ../Resources/runDoxygen.sh; sourceTree = "<group>"; };
 		D646DF08156B7E9B00BCAE8A /* doxygen.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = doxygen.config; path = ../Resources/doxygen.config; sourceTree = "<group>"; };
 		D673EFE11966F28B00A930ED /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -598,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=macosx10.5]" = (
 					ppc,
 					i386,
@@ -606,16 +604,20 @@
 				CURRENT_PROJECT_VERSION = 0.11;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/IOKit.framework/Versions/A/Headers";
 				INFOPLIST_FILE = Info.plist;
+				LLVM_LTO = YES;
 				MODULE_NAME = fi.dungeon.driver.SATSMARTDriver;
 				MODULE_VERSION = 0.11;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.dungeon.driver.SATSMARTDriver;
 				PRODUCT_NAME = SATSMARTDriver;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -625,20 +627,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=macosx10.5]" = (
 					ppc,
 					i386,
 				);
 				CURRENT_PROJECT_VERSION = 0.11;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
 				GCC_MODEL_TUNING = "";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/IOKit.framework/Versions/A/Headers";
 				INFOPLIST_FILE = Info.plist;
+				LLVM_LTO = YES;
 				MODULE_NAME = fi.dungeon.driver.SATSMARTDriver;
 				MODULE_VERSION = 0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.dungeon.driver.SATSMARTDriver;
 				PRODUCT_NAME = SATSMARTDriver;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -719,17 +725,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = /usr/local/bin;
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = smart_status;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -737,17 +747,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = /usr/local/bin;
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = smart_status;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -756,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -767,6 +782,8 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = smart_sample;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -774,7 +791,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -785,6 +802,8 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = smart_sample;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -792,22 +811,28 @@
 		A86A787614F57C910067035C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = "Build All";
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		A86A787714F57C910067035C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build All";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -816,6 +841,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=macosx10.5]" = (
 					ppc,
 					i386,
@@ -831,11 +857,14 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/";
 				INFOPLIST_FILE = "UserClientLib/SATSMARTLib-Info.plist";
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.dungeon.driver.SATSMARTLib;
 				PRODUCT_NAME = SATSMARTLib;
+				SDKROOT = macosx;
 				SYMROOT = build;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
@@ -844,7 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				"ARCHS[sdk=macosx10.5]" = (
 					ppc,
 					i386,
@@ -858,10 +887,13 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/";
 				INFOPLIST_FILE = "UserClientLib/SATSMARTLib-Info.plist";
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.dungeon.driver.SATSMARTLib;
 				PRODUCT_NAME = SATSMARTLib;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
@@ -871,6 +903,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -882,6 +915,8 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = set_properties;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -889,7 +924,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -900,6 +935,8 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = TestTool;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -907,21 +944,27 @@
 		D61EE2F7156A4F5D00A803A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = buildDMG;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		D61EE2F8156A4F5D00A803A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = buildDMG;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -929,20 +972,26 @@
 		D646DF04156B7E6100BCAE8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = doxygen;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		D646DF05156B7E6100BCAE8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = doxygen;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;

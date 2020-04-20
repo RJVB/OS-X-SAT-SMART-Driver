@@ -62,6 +62,8 @@ Compile
 
  * Compile all targets
     make package
+    Or, xcodebuild (use -sdk macosx10.9 on Mac OS X 10.9 to force the use of the platform SDK -
+    it may be wise to do the equivalent on other OS versions).
 
  * Unmount all existing external drives.
 
