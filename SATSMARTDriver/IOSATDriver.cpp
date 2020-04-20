@@ -1,4 +1,4 @@
-/*
+/* @file IOSATDriver.cpp
  *  IOSATDriver.cpp
  *
  *  Created by Jarkko Sonninen on 3.2.2012.
@@ -149,18 +149,18 @@ IOReturn org_dungeon_driver_IOSATDriver::setProperties(OSObject* properties)
     OSNumber*       number;
     IOReturn result = kIOReturnSuccess;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     dict = OSDynamicCast(OSDictionary, properties);
     require_action(dict, ErrorExit, result = kIOReturnBadArgument);
-    
+
     number = OSDynamicCast(OSNumber, dict->getObject(kMyPropertyKey));
     if (!number) {
         result = super::setProperties(properties);
     } else {
         UInt32 value= number->unsigned32BitValue();
-        
+
         DEBUG_LOG("%s[%p]::%s(%p) got value %u\n", getName(), this, __FUNCTION__, properties, (unsigned int)value);
-        
+
         // Some code to experiment the SAT commands
         switch (value) {
             case 1:
@@ -188,10 +188,10 @@ IOReturn org_dungeon_driver_IOSATDriver::setProperties(OSObject* properties)
 		IOLog("idle %d\n", Send_ATA_IDLE(0));
 		break;
         }
-        
+
         result = kIOReturnSuccess;
     }
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d %s\n", getClassName(), this,  __FUNCTION__, result, stringFromReturn(result));
     return result;
@@ -205,10 +205,10 @@ org_dungeon_driver_IOSATDriver::attach ( IOService * provider )
     bool result = false;
     require_string ( super::attach ( provider ), ErrorExit,
                     "Superclass didn't attach" );
-    
+
     //setProperty ( "Hello", "World" );
     result = true;
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, result);
     return result;
@@ -233,16 +233,16 @@ org_dungeon_driver_IOSATDriver::CreateStorageServiceNub ( void )
     //nub = OSTypeAlloc ( IOBlockStorageServices );
     nub = OSTypeAlloc ( IOSATServices );
     require_quiet ( nub, ErrorExit );
-    
+
     nub->init ( );
     require ( nub->attach ( this ), ReleaseNub );
     nub->registerService ( );
     nub->release ( );
     return;
-    
+
 ReleaseNub:
     nub->release ( );
-    
+
 ErrorExit:
     super::CreateStorageServiceNub();
     ERROR_LOG("%s::%s result failed\n", getClassName(), __FUNCTION__);
@@ -252,22 +252,22 @@ ErrorExit:
 IOReturn org_dungeon_driver_IOSATDriver::sendSMARTCommand ( IOSATCommand * command )
 {
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     SCSIServiceResponse serviceResponse = kSCSIServiceResponse_SERVICE_DELIVERY_OR_TARGET_FAILURE;
     SCSITaskIdentifier request            = NULL;
     int ataResult = kATAErrUnknownType;
     IOReturn err = kIOReturnInvalid;
     int direction, count, protocol;
     UInt8 opBytes;
-    
+
     IOSATBusCommand* cmd = OSDynamicCast( IOSATBusCommand, command);
     require_action_string(cmd, ErrorExit, err = kIOReturnBadArgument, "Command is not a IOSATBusCommand");
-    
+
     require (fSATSMARTCapable, ErrorExit );
 
     request = GetSCSITask ( );
     require (request, ErrorExit );
-    
+
     DEBUG_LOG("buffer %p\n", cmd->getBuffer());
     DEBUG_LOG("bytecount %d\n", (int)cmd->getByteCount());
     DEBUG_LOG("features %x\n", cmd->getErrorReg());
@@ -280,7 +280,7 @@ IOReturn org_dungeon_driver_IOSATDriver::sendSMARTCommand ( IOSATCommand * comma
     DEBUG_LOG("device %x\n", cmd->getDevice_Head());
     DEBUG_LOG("command %x\n", cmd->getStatus());
     DEBUG_LOG("flags %x\n", cmd->getFlags());
-    
+
     direction = (cmd->getFlags() & mATAFlagIORead) ? 1 : 0;
     count = 0;
     if (cmd->getBuffer() && cmd->getByteCount() == 512) count = 1;
@@ -289,7 +289,7 @@ IOReturn org_dungeon_driver_IOSATDriver::sendSMARTCommand ( IOSATCommand * comma
         protocol = direction ? kIOSATProtocolPIODataIn : kIOSATProtocolPIODataOut;
     }
     DEBUG_LOG("%s[%p]::%s direction %d, count %d, protocol %d\n", getClassName(), this, __FUNCTION__, direction, count, protocol);
-    
+
     if ( PASS_THROUGH_12or16 ( request,
                           cmd->getBuffer(),
                           0,               //     MULTIPLE_COUNT,
@@ -332,19 +332,19 @@ IOReturn org_dungeon_driver_IOSATDriver::sendSMARTCommand ( IOSATCommand * comma
             err=kIOReturnError;
         }
     }
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ErrorExit );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ErrorExit:
-    
+
     if (err == kIOReturnSuccess) {
         cmd->setResult(ataResult);
         cmd->executeCallback();
     }
-    
+
     DEBUG_LOG("%s[%p]::%s result %d %d %s\n", getClassName(), this,  __FUNCTION__, err, ataResult, stringFromReturn(err));
     return err;
 }
@@ -356,7 +356,7 @@ IOReturn org_dungeon_driver_IOSATDriver::setPowerState ( UInt32 powerStateOrdina
     IOReturn err= super::setPowerState(powerStateOrdinal, whatDevice);
     if (kIOReturnSuccess != err && 100000000 != err) {
         ERROR_LOG("%s::%s result %x\n", getClassName(), __FUNCTION__, err);
-    } 
+    }
     DEBUG_LOG("%s[%p]::%s result %x\n", getClassName(), this,  __FUNCTION__, err);
     return err;
 }
@@ -369,7 +369,7 @@ org_dungeon_driver_IOSATDriver::InitializeDeviceSupport ( void )
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
     result = super::InitializeDeviceSupport ( );
     require (result, ErrorExit);
-    
+
     //SendBuiltInINQUIRY ( );
     if (Send_ATA_IDENTIFY()) {
         //setProperty (kIOPropertyVendorNameKey, GetVendorString() );
@@ -389,7 +389,7 @@ org_dungeon_driver_IOSATDriver::InitializeDeviceSupport ( void )
             number->release();
         }
     }
-        
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, result);
     return result;
@@ -427,30 +427,30 @@ org_dungeon_driver_IOSATDriver::Send_ATA_IDENTIFY ( void )
     UInt8 *                            ptr                = NULL, opBytes;
     UInt16 * ataIdentify = NULL;
     bool result = false;
-    
+
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     // Get a new IOBufferMemoryDescriptor object with a buffer large enough
     // to hold the SCSICmd_INQUIRY_StandardData structure (defined in
     // SCSICmds_INQUIRY_Definitions.h).
     buffer = IOBufferMemoryDescriptor::withCapacity ( 512, kIODirectionIn, false );
-    
+
     // Return immediately if the buffer wasn't created.
     require ( ( buffer != NULL ), ErrorExit );
-    
+
     // Get the address of the beginning of the buffer and zero-fill the buffer.
     ptr = ( UInt8 * ) buffer->getBytesNoCopy ( );
     bzero ( ptr, buffer->getLength ( ) );
-    
+
     // Create a new SCSITask object; if unsuccessful, release the buffer and return.
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
-    
+
     // Prepare the buffer for an I/O transaction. This call must be
     // balanced by a call to the complete method (shown just before
     // ReleaseTask).
     require ( ( buffer->prepare ( ) == kIOReturnSuccess ), ReleaseTask );
-    
+
     // The BuildINQUIRY function shows how you can design and use a
     // command-building function to create a custom command to send
     // to your device. Although the BuildINQUIRY function builds a standard INQUIRY
@@ -488,11 +488,11 @@ org_dungeon_driver_IOSATDriver::Send_ATA_IDENTIFY ( void )
         swapbytes(buffer);
         ataIdentify = ( UInt16 * ) buffer->getBytesNoCopy ( );
         //hexdump16(ataIdentify, 80, 8);
-        
+
         trimcpy(serial, (char*)(ataIdentify+kATAIdentifySerialNumber), sizeof(serial));
         trimcpy(revision, (char*)(ataIdentify+kATAIdentifyFirmwareRevision), sizeof(revision));
         trimcpy(model, (char*)(ataIdentify+kATAIdentifyModelNumber), sizeof(model));
-        
+
 	// TODO get from build
         IOLog("SATSMARTDriver v0.4: disk serial '%s', revision '%s', model '%s', kSCSICmd_PASS_THROUGH_%u\n",
 		    serial, revision, model, opBytes );
@@ -531,19 +531,19 @@ org_dungeon_driver_IOSATDriver::Send_ATA_IDENTIFY ( void )
 		);
         fSATSMARTCapable = false;
     }
-    
+
     buffer->complete ( );
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
     require_quiet ( ( buffer != NULL ), ErrorExit );
     buffer->release ( );
     buffer = NULL;
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, (int)result);
     return result;
@@ -560,20 +560,20 @@ org_dungeon_driver_IOSATDriver::Send_ATA_SMART_READ_DATA ( void )
     UInt8 *                            ptr                = NULL, opBytes;
     UInt16 * ptr16;
     bool result = false;
-    
+
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     buffer = IOBufferMemoryDescriptor::withCapacity ( 512, kIODirectionIn, false );
-    
+
     require ( ( buffer != NULL ), ErrorExit );
     ptr = ( UInt8 * ) buffer->getBytesNoCopy ( );
     bzero ( ptr, buffer->getLength ( ) );
     ptr16 = ( UInt16 * ) buffer->getBytesNoCopy ( );
-    
+
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
     require ( ( buffer->prepare ( ) == kIOReturnSuccess ), ReleaseTask );
-    
+
     if ( PASS_THROUGH_12or16 ( request,
                           buffer,
                           0,               //     MULTIPLE_COUNT,
@@ -606,7 +606,7 @@ org_dungeon_driver_IOSATDriver::Send_ATA_SMART_READ_DATA ( void )
         swapbytes(buffer);
         hexdump16(ptr16, 368, 10);
 	result = true;
-        
+
     }
     else
     {
@@ -636,19 +636,19 @@ org_dungeon_driver_IOSATDriver::Send_ATA_SMART_READ_DATA ( void )
 		);
 		fSATSMARTCapable = false;
     }
-    
+
     buffer->complete ( );
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
     require_quiet ( ( buffer != NULL ), ErrorExit );
     buffer->release ( );
     buffer = NULL;
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, (int)result);
     return result;
@@ -661,12 +661,12 @@ bool
     SCSITaskIdentifier request            = NULL;
     bool result = false;
     UInt8 opBytes;
-    
+
     DEBUG_LOG("%s[%p]::%s value %d\n", getClassName(), this, __FUNCTION__, (int) value);
-    
+
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
-    
+
     if ( PASS_THROUGH_12or16 ( request,
                           0,               // buffer
                           0,               //     MULTIPLE_COUNT,
@@ -701,14 +701,14 @@ bool
         ERROR_LOG("%s::%s failed %d %d, kSCSICmd_PASS_THROUGH_%u\n",
 			   getClassName(), __FUNCTION__, serviceResponse,GetTaskStatus ( request ), opBytes );
     }
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, (int)result);
     return result;
@@ -721,12 +721,12 @@ org_dungeon_driver_IOSATDriver::Send_ATA_STANDBY(UInt8 value)
     SCSITaskIdentifier request            = NULL;
     bool result = false;
     UInt8 opBytes;
-    
+
     DEBUG_LOG("%s[%p]::%s value %d\n", getClassName(), this, __FUNCTION__, (int) value);
-    
+
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
-    
+
     if ( PASS_THROUGH_12or16 ( request,
                           0,               // buffer
                           0,               //     MULTIPLE_COUNT,
@@ -761,14 +761,14 @@ org_dungeon_driver_IOSATDriver::Send_ATA_STANDBY(UInt8 value)
         ERROR_LOG("%s::%s failed %d %d, kSCSICmd_PASS_THROUGH_%u\n",
 			   getClassName(), __FUNCTION__, serviceResponse,GetTaskStatus ( request ), opBytes );
     }
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, (int)result);
     return result;
@@ -781,12 +781,12 @@ org_dungeon_driver_IOSATDriver::Send_ATA_SEND_SOFT_RESET ( void )
     SCSITaskIdentifier request            = NULL;
     bool result = false;
     UInt8 opBytes;
-    
+
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
-    
+
     if ( PASS_THROUGH_12or16 ( request,
                           0,               // buffer
                           0,               //     MULTIPLE_COUNT,
@@ -821,14 +821,14 @@ org_dungeon_driver_IOSATDriver::Send_ATA_SEND_SOFT_RESET ( void )
         ERROR_LOG("%s::%s failed %d %d, kSCSICmd_PASS_THROUGH_%u\n",
 			   getClassName(),  __FUNCTION__, serviceResponse,GetTaskStatus ( request ), opBytes );
     }
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, (int)result);
     return result;
@@ -861,11 +861,11 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_12 (
     int direction = kSCSIDataTransfer_NoDataTransfer;
     int transferCount = 0;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     // Validate the parameters here.
     require ( ( request != NULL ), ErrorExit );
     require ( ResetForNewTask ( request ), ErrorExit );
-    
+
     // The helper functions ensure that the parameters fit within the
     // CDB fields and that the buffer passed in is large enough for
     // the transfer length.
@@ -885,7 +885,7 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_12 (
     require ( IsParameterValid ( DEVICE, kSCSICmdFieldMask1Byte ), ErrorExit );
     require ( IsParameterValid ( COMMAND, kSCSICmdFieldMask1Byte ), ErrorExit );
     require ( IsParameterValid ( CONTROL, kSCSICmdFieldMask1Byte ), ErrorExit );
-    
+
     switch (PROTOCOL) {
         case kIOSATProtocolHardReset:     // Hard Reset
         case kIOSATProtocolSRST:     // SRST
@@ -929,7 +929,7 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_12 (
                 }
             }
     }
-    
+
     // This is a 12-byte command: fill out the CDB appropriately
     SetCommandDescriptorBlock ( request,
                                kSCSICmd_PASS_THROUGH_12,
@@ -944,16 +944,16 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_12 (
                                COMMAND,
                                0,
                                CONTROL);
-    
+
     SetTimeoutDuration ( request, 0 );
     SetDataTransferDirection ( request, direction);
     SetRequestedDataTransferCount ( request, transferCount );
     if (transferCount > 0) {
         SetDataBuffer ( request, dataBuffer );
     }
-    
+
     result = true;
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, result);
     return result;
@@ -982,11 +982,11 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_16 (
 {
     bool result = false;
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
-    
+
     // Validate the parameters here.
     require ( ( request != NULL ), ErrorExit );
     require ( ResetForNewTask ( request ), ErrorExit );
-    
+
     // The helper functions ensure that the parameters fit within the
     // CDB fields and that the buffer passed in is large enough for
     // the transfer length.
@@ -1007,7 +1007,7 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_16 (
     require ( IsParameterValid ( COMMAND, kSCSICmdFieldMask1Byte ), ErrorExit );
     require ( IsParameterValid ( CONTROL, kSCSICmdFieldMask1Byte ), ErrorExit );
     require ( IsMemoryDescriptorValid ( dataBuffer, dataBuffer->getLength() ), ErrorExit );
-    
+
     // This is a 16-byte command: fill out the CDB appropriately
     SetCommandDescriptorBlock ( request,
                                kSCSICmd_PASS_THROUGH_16,
@@ -1026,14 +1026,14 @@ org_dungeon_driver_IOSATDriver::PASS_THROUGH_16 (
                                DEVICE,
                                COMMAND,
                                CONTROL);
-    
+
     SetDataTransferDirection ( request, kSCSIDataTransfer_FromTargetToInitiator );
     SetTimeoutDuration ( request, 0 );
     SetDataBuffer ( request, dataBuffer );
     SetRequestedDataTransferCount ( request, dataBuffer->getLength() );
-    
+
     result = true;
-    
+
 ErrorExit:
     DEBUG_LOG("%s[%p]::%s result %d\n", getClassName(), this,  __FUNCTION__, result);
     return result;
@@ -1087,18 +1087,18 @@ org_dungeon_driver_IOSATDriver::SendBuiltInINQUIRY ( void )
     SCSITaskIdentifier request = NULL;
     UInt8 *                            ptr     = NULL;
     SCSICmd_INQUIRY_StandardDataAll *   inquiryBuffer = NULL;
-    
+
     DEBUG_LOG("%s[%p]::%s\n", getClassName(), this, __FUNCTION__);
     buffer = IOBufferMemoryDescriptor::withCapacity ( sizeof ( SCSICmd_INQUIRY_StandardDataAll ), kIODirectionIn, false );
     require ( ( buffer != NULL ), ErrorExit );
-    
+
     ptr = ( UInt8 * ) buffer->getBytesNoCopy ( );
     bzero ( ptr, buffer->getLength ( ) );
-    
+
     request = GetSCSITask ( );
     require ( ( request != NULL ), ReleaseBuffer );
     require ( ( buffer->prepare ( ) == kIOReturnSuccess ), ReleaseTask );
-    
+
     if ( INQUIRY (  request,
                   buffer,
                   0,
@@ -1109,7 +1109,7 @@ org_dungeon_driver_IOSATDriver::SendBuiltInINQUIRY ( void )
     {
         serviceResponse = SendCommand ( request, kTenSecondTimeoutInMS );
     }
-    
+
     if ( ( serviceResponse == kSCSIServiceResponse_TASK_COMPLETE ) &&
         GetTaskStatus ( request ) == kSCSITaskStatus_GOOD )
     {
@@ -1120,19 +1120,19 @@ org_dungeon_driver_IOSATDriver::SendBuiltInINQUIRY ( void )
     {
         ERROR_LOG("%s::%s failed %d %d\n", getClassName(), __FUNCTION__, serviceResponse,GetTaskStatus ( request ) );
     }
-    
+
     buffer->complete ( );
-    
+
 ReleaseTask:
     require_quiet ( ( request != NULL ), ReleaseBuffer );
     ReleaseSCSITask ( request );
     request = NULL;
-    
+
 ReleaseBuffer:
     require_quiet ( ( buffer != NULL ), ErrorExit );
     buffer->release ( );
     buffer = NULL;
-    
+
 ErrorExit:
     return;
 }
