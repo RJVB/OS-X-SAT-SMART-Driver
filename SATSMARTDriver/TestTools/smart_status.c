@@ -53,6 +53,7 @@
 #include <IOKit/storage/IOMedia.h>
 #include <IOKit/storage/ata/ATASMARTLib.h>
 #include <sysexits.h>
+#include <AssertMacros.h>
 
 static const char *getStatus(int status) {
     switch (status) {

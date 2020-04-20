@@ -93,6 +93,10 @@ fileName,                                    \
 lineNumber,                                  \
 errorCode)                                   \
 
+#define Endian16_Swap(value) \
+((((UInt16)((value) & 0x00FF)) << 8) | \
+(((UInt16)((value) & 0xFF00)) >> 8))
+
 static void
 _DebugAssert ( const char *     componentNameString,
               const char *  assertionString,
