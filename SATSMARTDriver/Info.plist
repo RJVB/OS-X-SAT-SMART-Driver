@@ -40,6 +40,24 @@
 			<string>IOSCSIPeripheralDeviceNub</string>
 			<key>Identifiers</key>
 			<dict>
+				<key>Orico MSG-U3 / JMicron JMS578</key>
+				<dict>
+					<key>PassThroughMode</key>
+					<string>sat16</string>
+					<key>idProduct</key>
+					<integer>40961</integer>
+					<key>idVendor</key>
+					<integer>128</integer>
+				</dict>
+				<key>Sabrent M2 SATA+USB3</key>
+				<dict>
+					<key>PassThroughMode</key>
+					<string>jmicron</string>
+					<key>idProduct</key>
+					<integer>5473</integer>
+					<key>idVendor</key>
+					<integer>5421</integer>
+				</dict>
 				<key>(No Name 1)</key>
 				<dict>
 					<key>PassThroughMode</key>
